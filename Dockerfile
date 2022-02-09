@@ -7,8 +7,8 @@ COPY src/* ${HOME}/src
 RUN pip uninstall -y networkit
 
 RUN conda install cython
-RUN git clone https://github.com/networkit/networkit ${HOME}/master
-RUN cd ${HOME}/master && git submodule update --init
+RUN git clone https://github.com/fabratu/networkit ${HOME}/master
+RUN cd ${HOME}/master && git checkout fix-viz-maxent && git submodule update --init
 RUN cd ${HOME}/master && python setup.py build_ext
 RUN cd ${HOME}/master && pip install -e .
 

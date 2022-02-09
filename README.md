@@ -15,4 +15,4 @@ docker -t local:RIN-visualizer build .
 docker run -it -p 8888:8888 local:RIN-visualizer
 ```
 
-During launch, the Jupyter server prints an URL starting with `https://127.0.0.1:8888/`. The complete URL has to be copied into a browser for access.
+During launch, the Jupyter server prints an URL starting with `https://127.0.0.1:8888/`. The complete URL has to be copied into a browser for access. Data and notebooks are residing in folder `src`.
